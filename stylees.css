@@ -1,0 +1,435 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom right, #f2f2f2, #e6f0ff);
+    color: #333;
+  }
+  
+  /* Header + Navbar */
+  header {
+    background-color: #1e1e2f;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0 0;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    color: #ffcc00;
+  }
+  
+  /* Main General Styling */
+  main {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .intro {
+    animation: fadeIn 1.5s ease;
+  }
+  
+  .intro h2 {
+    font-size: 2rem;
+    color: #1e1e2f;
+  }
+  
+  .intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .hero-img {
+    margin-top: 30px;
+    width: 300px;
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .hero-img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Google Map Section */
+  .map-section {
+    margin-top: 50px;
+  }
+  
+  .map-section h3 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    color: #1e1e2f;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #1e1e2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* ------------------------------
+     About Page Styling Starts Here
+  --------------------------------- */
+  
+  .about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .about-column {
+    flex: 1 1 45%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+    text-align: left;
+  }
+  
+  .about-column:hover {
+    transform: translateY(-5px);
+  }
+  
+  .about-column h2,
+  .about-column h3 {
+    color: #1e1e2f;
+    margin-bottom: 15px;
+  }
+  
+  .about-column p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .about-column ul,
+  .about-column ol {
+    margin-left: 20px;
+    line-height: 1.6;
+    padding-left: 15px;
+  }
+  
+  .about-column ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+  }
+  
+  .about-column ol ul {
+    list-style-type: square;
+    margin-left: 20px;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .about-wrapper {
+      flex-direction: column;
+      padding: 30px 15px;
+    }
+  
+    .about-column {
+      width: 100%;
+    }
+  }
+  /* ------------------------------
+   Projects Page (Left-Right Layout)
+--------------------------------- */
+.project-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+  
+  .project-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .project-row.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .project-img {
+    flex: 1 1 45%;
+  }
+  
+  .project-img img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  }
+  
+  .project-text {
+    flex: 1 1 50%;
+    text-align: left;
+  }
+  
+  .project-text h3 {
+    margin-top: 0;
+    color: #1e1e2f;
+  }
+  
+  .project-text p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    margin: 10px 0 20px;
+  }
+  
+  .project-text .btn {
+    padding: 10px 20px;
+    background-color: #1e1e2f;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-text .btn:hover {
+    background-color: #ffcc00;
+    color: #1e1e2f;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .project-row, .project-row.reverse {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .project-text {
+      text-align: center;
+    }
+  }
+  /* ------------------------------
+   Contact Page Styling
+--------------------------------- */
+.contact-section {
+    max-width: 700px;
+    margin: auto;
+    padding: 50px 20px;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    color: #1e1e2f;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #1e1e2f;
+  }
+  
+  .contact-section .btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #1e1e2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-section .btn:hover {
+    background-color: #ffcc00;
+    color: #1e1e2f;
+  }
+  /* ------------------------------
+   Survey Page Styling
+--------------------------------- */
+.survey-section {
+    max-width: 700px;
+    margin: auto;
+    padding: 50px 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  .survey-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e1e2f;
+  }
+  
+  .survey-section .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .survey-section label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  .survey-section input[type="text"],
+  .survey-section input[type="email"],
+  .survey-section textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+  }
+  
+  .survey-section input[type="radio"],
+  .survey-section input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .survey-section .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #1e1e2f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .survey-section .btn:hover {
+    background-color: #ffcc00;
+    color: #1e1e2f;
+  }
+  <style>
+  /* Container for slider */
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    max-height: 300px;
+    position: relative;
+  }
+
+  /* The slider itself (all images inside this) */
+  .slider {
+    display: flex;
+    width: 400%;
+    animation: scrollSlider 240s ease-in-out infinite; /* Slower speed, 240 seconds */
+  }
+
+  /* Each individual slide */
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Image styles */
+  .slide img {
+    width: 50%;  /* Reduce image size to fit better */
+    max-width: 400px;
+    height: auto;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Title under image */
+  .slide h4 {
+    margin-top: 8px;
+    font-size: 1.1em;
+    color: #333;
+  }
+
+  /* Keyframes for the animation */
+  @keyframes scrollSlider {
+    0%    { transform: translateX(0%); }
+    20%   { transform: translateX(0%); }
+    25%   { transform: translateX(-100%); }
+    45%   { transform: translateX(-100%); }
+    50%   { transform: translateX(-200%); }
+    70%   { transform: translateX(-200%); }
+    75%   { transform: translateX(-300%); }
+    95%   { transform: translateX(-300%); }
+    100%  { transform: translateX(0%); }
+  }
+</style>
