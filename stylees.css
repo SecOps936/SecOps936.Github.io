@@ -77,6 +77,11 @@
   .hero-img:hover {
     transform: scale(1.05);
   }
+   .hero-img {
+  max-width: 100%;
+  height: auto;
+}
+
   
   /* Google Map Section */
   .map-section {
